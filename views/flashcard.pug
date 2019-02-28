@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .card
+    .card__front
+      p.card__front-question #{question}
+      button.button.button__see-answer See answer
+    .card__back
+      p.card__back-answer #{answer}
+      button.button.button__see-question See Question
+  .card__button-box
+    button.button.button-previous previous
+    button.button.button-next next
+
