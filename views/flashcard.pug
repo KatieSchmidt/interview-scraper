@@ -9,6 +9,8 @@ block content
       p.card__back-answer #{answer}
       button.button.button__see-question See Question
   .card__button-box
-    button.button.button-previous previous
-    button.button.button-next next
+    button.button.button-previous
+      a(href=`/flashcards/${index}`) previous
+    button.button.button-next
+      a(href=`/flashcards/${index + 2}`) next
 
