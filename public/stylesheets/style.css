@@ -1,76 +1,102 @@
-html {
-  height: 100vh;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(255, 232, 203);
-  height: 100vh;
+  display: grid;
+  background-color: rgb(49, 48, 48);
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 25vh);
+}
+
+.section__card {
+  display: grid;
+  grid-row: 2/4;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  background-color: rgba(255, 255, 255, 0.788);
+  font-size: 2rem;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card {
-  height: 50vh;
-  margin: 0 5% 0 5%;
-  transform: translateY(50%);
-  background-color: rgba(128, 128, 128, 0.822);
-  border-radius: 5px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+  grid-row: 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 50%;
+  overflow: scroll;
 }
 
-.card__front {
-  grid-column: 3/-3;
+/*front of card info*/
+.card__front-question {
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 5%;
+}
+
+.button__section {
   grid-row: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
 }
-
-.card__front-question {
-  grid-column: 1/-1;
-  text-align: center;
-  font-size: 20px;
-}
-
 .button__see-answer {
   align-self: center;
   justify-self: center;
-  grid-column: 1/-1;
-  grid-row: 2;
 }
 
-.card__back {
-  display: none;
-  grid-column: 3/-3;
+/*back of card styling*/
+
+.card__back-answer {
+  grid-row: 1/2;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 5%;
+  overflow: scroll;
 }
 
-.card__button-box {
-  grid-column: 1/-1;
+.button__see-question {
+  align-self: center;
+  justify-self: center;
+}
+
+/*button box at bottom*/
+.button {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button-box {
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr;
 }
 
 .button-previous {
   grid-column: 2/4;
-  grid-row: 2;
   align-self: center;
   justify-self: center;
 }
 
 .button-next {
   grid-column: -4/-2;
-  grid-row: 2;
   align-self: center;
   justify-self: center;
 }
 
-.button {
-  background-color: rgba(255, 232, 203, 0.76);
-  height: 40px;
-  width: 100px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+.display-none {
+  display: none;
 }

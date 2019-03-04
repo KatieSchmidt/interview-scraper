@@ -3,8 +3,6 @@ function returnSplitString(textString) {
   return textString.split("\n");
 }
 
-// console.log(returnSplitString(testString));
-
 //takes a list of strings and returns new list without empty strings
 function removeEmptyStrings(stringList) {
   let newList = [];
@@ -16,13 +14,13 @@ function removeEmptyStrings(stringList) {
   return newList;
 }
 
-// console.log(removeEmptyStrings(returnSplitString(testString)));
-
 // takes a list of strings and returns an object with a question and its answer
 function makeQAObject(stringList) {
   let object = {
     question: stringList[0],
-    answer: []
+    difficulty: stringList[1],
+    answer: [],
+    source: stringList[-1]
   };
   for (i = 2; i < stringList.length - 1; i++) {
     object.answer.push(stringList[i]);

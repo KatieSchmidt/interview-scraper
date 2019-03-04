@@ -1,14 +1,16 @@
 extends layout
 
 block content
-  .card
-    .card__front
+  .section__card
+    .card
       p.card__front-question #{question}
-      button.button.button__see-answer See answer
-    .card__back
-      p.card__back-answer #{answer}
-      button.button.button__see-question See Question
-    .card__button-box
+      .button__section
+        button.button.button__see-answer See Answer
+
+      p.card__back-answer.display-none #{answer}
+      .button__section.display-none
+        button.button.button__see-question See Question
+    .button-box
       button.button.button-previous
         a(href=`/flashcards/${index}`) previous
       button.button.button-next
