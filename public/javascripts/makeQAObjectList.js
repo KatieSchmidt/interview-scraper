@@ -15,4 +15,5 @@ function makeQAObjectList(listOfQAStrings) {
 //call function using scraped json data
 const objectList = makeQAObjectList(dataStrings);
 
+// console.log(objectList);
 module.exports = objectList;

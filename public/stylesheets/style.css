@@ -48,10 +48,15 @@ body {
   padding: 5%;
 }
 
-.button__section {
+.button__section-question {
   grid-row: 2;
   display: grid;
 }
+.button__section-answer {
+  grid-row: 2;
+  display: grid;
+}
+
 .button__see-answer {
   align-self: center;
   justify-self: center;

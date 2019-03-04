@@ -4,15 +4,17 @@ block content
   .section__card
     .card
       p.card__front-question #{question}
-      .button__section
+      .button__section-question
         button.button.button__see-answer See Answer
 
       p.card__back-answer.display-none #{answer}
-      .button__section.display-none
+      .button__section-answer.display-none
         button.button.button__see-question See Question
     .button-box
-      button.button.button-previous
-        a(href=`/flashcards/${index}`) previous
-      button.button.button-next
-        a(href=`/flashcards/${index + 2}`) next
 
+
+      a(href=`/flashcards/${previousId}`).button-previous
+        button.button previous
+
+      a(href=`/flashcards/${nextId}`).button-next
+        button.button next
