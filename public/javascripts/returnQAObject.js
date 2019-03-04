@@ -18,11 +18,12 @@ function removeEmptyStrings(stringList) {
 function makeQAObject(stringList) {
   let object = {
     question: stringList[0],
-    difficulty: stringList[1],
+    topic: stringList[1],
+    difficulty: stringList[2],
     answer: [],
-    source: stringList[-1]
+    source: stringList[stringList.length - 2]
   };
-  for (i = 2; i < stringList.length - 1; i++) {
+  for (i = 3; i < stringList.length - 2; i++) {
     object.answer.push(stringList[i]);
   }
   return object;
