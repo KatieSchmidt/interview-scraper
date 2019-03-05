@@ -52,10 +52,6 @@ body {
   grid-row: 3;
   display: grid;
 }
-.button__section-answer {
-  grid-row: 3;
-  display: grid;
-}
 
 .button__see-answer {
   align-self: center;
@@ -72,6 +68,11 @@ body {
   overflow: scroll;
 }
 
+.button__section-answer {
+  grid-row: 3;
+  display: grid;
+}
+
 .button__see-question {
   align-self: center;
   justify-self: center;
@@ -82,6 +83,7 @@ body {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .button-box {
