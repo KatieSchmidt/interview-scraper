@@ -37,9 +37,4 @@ app.use(function(err, req, res, next) {
   res.render("error");
 });
 
-//keep app from falling asleep on heroku
-setInterval(function() {
-  http.get("https://express-flashcards.herokuapp.com/");
-}, 300000);
-
 module.exports = app;
