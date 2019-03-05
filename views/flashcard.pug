@@ -7,7 +7,10 @@ block content
       .button__section-question
         button.button.button__see-answer See Answer
 
-      p.card__back-answer.display-none #{answer}
+      .card__back-answer.display-none 
+       each item in answer 
+        p #{item}
+        <br/>
       .button__section-answer.display-none
         button.button.button__see-question See Question
     .button-box

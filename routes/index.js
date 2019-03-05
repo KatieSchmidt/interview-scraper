@@ -33,4 +33,9 @@ router.get("/flashcards/:id", function(req, res, next) {
   });
 });
 
+/* GET  */
+router.get("/logit", function(req, res, next) {
+  res.send(objectList);
+});
+
 module.exports = router;
