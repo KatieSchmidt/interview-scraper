@@ -5,21 +5,21 @@ block content
     .card
       .card__front
         .card__front-question-section
-          p.card__front-question-section-question #{question}
-        button.card__front-button-section See Answer
+          h1.card__front-question-section-question #{question}
+        .card__front-button-section
+          p.absolute-position-p See Answer
 
       .card__back.display-none 
         .card__back-answer-section
           each item in answer 
             p.card__back-answer-section-answer #{item} 
             <br/>
-        button.card__back-button-section See Question
+        .card__back-button-section 
+          p.absolute-position-p See Question
     
-    .button-box
-      .button-previous
-        a(href=`/flashcards/${previousId}`)
-          button Previous
+      .button-box
+        a(href=`/flashcards/${previousId}`).button-previous 
+         p.absolute-position-p Previous
 
-      .button-next
-        a(href=`/flashcards/${nextId}`)
-          button Next
+        a(href=`/flashcards/${nextId}`).button-next 
+          p.absolute-position-p Next
