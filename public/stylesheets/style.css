@@ -70,11 +70,12 @@ body {
 }
 
 .card__back-answer-section {
+  top: 0;
   height: 75%;
   width: 100%;
-  position: relative;
+  position: absolute;
   overflow: scroll;
-  padding: 10%;
+  padding: 5% 10% 0% 10%;
   font-size: 32px;
 }
 
@@ -83,7 +84,7 @@ body {
   width: 100%;
   bottom: 0;
   text-align: center;
-  position: relative;
+  position: absolute;
   cursor: pointer;
 }
 
