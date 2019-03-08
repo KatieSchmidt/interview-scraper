@@ -256,3 +256,31 @@ body {
 .display-none {
   display: none;
 }
+
+.question-links {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20%;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  overflow: scroll;
+}
+
+.question {
+  display: inline;
+  position: relative;
+  padding: 15px;
+}
+
+.question-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

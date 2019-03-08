@@ -35,7 +35,8 @@ router.get("/fullstack-cafe/:id", function(req, res, next) {
     question: objectList[questionIndex].question,
     answer: objectList[questionIndex].answer,
     nextId: nextId,
-    previousId: previousId
+    previousId: previousId,
+    listLength: objectList.length
   });
 });
 
@@ -60,7 +61,8 @@ router.get("/thirty-seconds/:id", function(req, res, next) {
     question: thirtySecondsData[questionIndex].question,
     answer: thirtySecondsData[questionIndex].answer,
     nextId: nextId,
-    previousId: previousId
+    previousId: previousId,
+    listLength: thirtySecondsData.length
   });
 });
 
