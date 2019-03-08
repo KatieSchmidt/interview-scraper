@@ -4,13 +4,18 @@ var express = require("express");
 var router = express.Router();
 let objectList = require("../public/javascripts/makeQAObjectList");
 
+//parse data for new routes
+var fs = require("fs");
+var data = fs.readFileSync("thirtySecondsOfInterviews.json", "utf8");
+var thirtySecondsData = JSON.parse(data);
+
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.redirect("/flashcards/1");
+  res.redirect("/fullstack-cafe/1");
 });
 
 /* GET flashcard by id/index. */
-router.get("/flashcards/:id", function(req, res, next) {
+router.get("/fullstack-cafe/:id", function(req, res, next) {
   let questionIndex = req.params.id - 1;
   let nextId;
   let previousId;
@@ -26,6 +31,7 @@ router.get("/flashcards/:id", function(req, res, next) {
   }
 
   res.render("flashcard", {
+    website: "fullstack-cafe",
     question: objectList[questionIndex].question,
     answer: objectList[questionIndex].answer,
     nextId: nextId,
@@ -34,8 +40,8 @@ router.get("/flashcards/:id", function(req, res, next) {
 });
 
 /* GET  */
-router.get("/logit", function(req, res, next) {
-  res.send(objectList);
+router.get("/thirty-seconds/:id", function(req, res, next) {
+  res.send(thirtySecondsData[0].question);
 });
 
 module.exports = router;

@@ -19,7 +19,6 @@ seeQuestionButton.onclick = () => {
 };
 
 let colorArray = document.getElementsByClassName("color");
-// console.log(colorArray);
 
 for (var i = 0; i < colorArray.length; i++) {
   colorArray[i].onclick = function(e) {
