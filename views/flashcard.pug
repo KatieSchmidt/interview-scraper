@@ -26,9 +26,12 @@ block content
 
       .card__back.display-none 
         .card__back-answer-section
-          each item in answer 
-            p.card__back-answer-section-answer #{item} 
-            <br/>
+          if website === "fullstack-cafe"
+            each item in answer 
+              p.card__back-answer-section-answer #{item} 
+              <br/>
+          if website === "thirty-seconds"
+            p.card__back-answer-section-answer #{answer}
         .card__back-button-section 
           p.absolute-position-p See Question
     

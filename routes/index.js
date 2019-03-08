@@ -4,7 +4,7 @@ var express = require("express");
 var router = express.Router();
 let objectList = require("../public/javascripts/makeQAObjectList");
 
-//parse data for new routes
+//parse data from new 30 second site
 var fs = require("fs");
 var data = fs.readFileSync("thirtySecondsOfInterviews.json", "utf8");
 var thirtySecondsData = JSON.parse(data);
@@ -39,9 +39,29 @@ router.get("/fullstack-cafe/:id", function(req, res, next) {
   });
 });
 
-/* GET  */
+/* GET  thirty seconds interview questions and answers*/
 router.get("/thirty-seconds/:id", function(req, res, next) {
-  res.send(thirtySecondsData[0].question);
+  let questionIndex = req.params.id - 1;
+  let nextId;
+  let previousId;
+  if (questionIndex === 0) {
+    previousId = objectList.length;
+    nextId = Number(req.params.id) + 1;
+  } else if (questionIndex === objectList.length - 1) {
+    previousId = Number(req.params.id) - 1;
+    nextId = 1;
+  } else {
+    previousId = Number(req.params.id) - 1;
+    nextId = Number(req.params.id) + 1;
+  }
+
+  res.render("flashcard", {
+    website: "thirty-seconds",
+    question: thirtySecondsData[questionIndex].question,
+    answer: thirtySecondsData[questionIndex].answer,
+    nextId: nextId,
+    previousId: previousId
+  });
 });
 
 module.exports = router;
