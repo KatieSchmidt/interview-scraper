@@ -114,7 +114,8 @@ body {
 .card__front-question-section {
   height: 75%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  overflow: scroll;
 }
 
 .card__front-question-section-question {
@@ -131,7 +132,8 @@ body {
   height: 25%;
   width: 100%;
   bottom: 0;
-  position: relative;
+  text-align: center;
+  position: absolute;
   cursor: pointer;
 }
 
