@@ -44,6 +44,7 @@ body {
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
+  font-size: 1.2em;
 }
 
 .site-holder {
@@ -61,7 +62,7 @@ body {
   height: 100%;
   position: relative;
   color: black;
-  font-size: 20px;
+  font-size: 1em;
 }
 .vertical-align {
   position: absolute;
@@ -115,6 +116,7 @@ body {
   text-align: center;
   text-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.2);
   overflow: scroll;
+  font-size: 1.2em;
 }
 
 .card__front-button-section {
@@ -140,7 +142,7 @@ body {
   position: absolute;
   overflow: scroll;
   padding: 5% 10% 0% 10%;
-  font-size: 32px;
+  font-size: 1em;
 }
 
 .card__back-button-section {
@@ -184,7 +186,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  font-size: 30px;
+  font-size: 1em;
   text-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.2);
 }
 
